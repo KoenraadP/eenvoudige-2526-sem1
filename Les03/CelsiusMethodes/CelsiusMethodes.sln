@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelsiusMethodes", "CelsiusMethodes\CelsiusMethodes.csproj", "{A5CF357F-7828-4400-B41E-E75ADFBA1844}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5CF357F-7828-4400-B41E-E75ADFBA1844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CF357F-7828-4400-B41E-E75ADFBA1844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CF357F-7828-4400-B41E-E75ADFBA1844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CF357F-7828-4400-B41E-E75ADFBA1844}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AD6BE80-5D92-4808-8CBC-4B2AD9157B2D}
+	EndGlobalSection
+EndGlobal
