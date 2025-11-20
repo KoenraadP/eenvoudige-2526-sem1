@@ -55,6 +55,7 @@
             this.btnSwap.TabIndex = 2;
             this.btnSwap.Text = "Verwissel";
             this.btnSwap.UseVisualStyleBackColor = true;
+            this.btnSwap.Click += new System.EventHandler(this.BtnSwap_Click);
             // 
             // FrmSwap
             // 

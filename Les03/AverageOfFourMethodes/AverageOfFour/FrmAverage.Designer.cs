@@ -80,8 +80,9 @@
             this.btnAvg.TabIndex = 4;
             this.btnAvg.Text = "Gemiddelde";
             this.btnAvg.UseVisualStyleBackColor = true;
+            this.btnAvg.Click += new System.EventHandler(this.BtnAvg_Click);
             // 
-            // frmAverage
+            // FrmAverage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +93,7 @@
             this.Controls.Add(this.txtThree);
             this.Controls.Add(this.txtTwo);
             this.Controls.Add(this.txtOne);
-            this.Name = "frmAverage";
+            this.Name = "FrmAverage";
             this.Text = "Gemiddelde";
             this.ResumeLayout(false);
             this.PerformLayout();
