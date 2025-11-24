@@ -51,6 +51,7 @@
             this.btnArea.TabIndex = 2;
             this.btnArea.Text = "bereken oppervlakte";
             this.btnArea.UseVisualStyleBackColor = true;
+            this.btnArea.Click += new System.EventHandler(this.btnArea_Click);
             // 
             // txtResult
             // 
@@ -66,7 +67,7 @@
             this.txtRadius.Size = new System.Drawing.Size(119, 20);
             this.txtRadius.TabIndex = 4;
             // 
-            // frmAreaCircleMethods
+            // FrmAreaCircleMethods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,7 +76,7 @@
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.btnArea);
             this.Controls.Add(this.label1);
-            this.Name = "frmAreaCircleMethods";
+            this.Name = "FrmAreaCircleMethods";
             this.Text = "AreaCircle Methodes";
             this.ResumeLayout(false);
             this.PerformLayout();

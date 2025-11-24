@@ -58,6 +58,8 @@ namespace distance
 
         #endregion
 
+        #region events
+
         private void BtnDistance_Click(object sender, EventArgs e)
         {
             // gemaakte methodes aanroepen
@@ -66,5 +68,7 @@ namespace distance
             distance = Math.Round(distance, 2);
             txtOutput.Text = Output(distance);
         }
+
+        #endregion
     }
 }

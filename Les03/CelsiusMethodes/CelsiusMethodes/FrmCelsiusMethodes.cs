@@ -26,6 +26,10 @@ namespace CelsiusMethodes
         // methode die als parameter een waarde in celsius krijgt
         // return van methode is deze waarde omgezet naar fahrenheit
         // formule: waarde in celsius * 1.8 + 32
+        private double ToFahrenheit(double celsius)
+        {
+
+        }
 
 
         // methode die als parameter een waarde in fahrenheit krijgt

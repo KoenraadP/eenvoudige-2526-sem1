@@ -26,7 +26,19 @@ namespace AreaCircleMethodes
         // methode die als parameter een straal van een cirkel krijgt
         // de uitvoer (return) van de methode is de oppervlakte van deze cirkel
         // formule: straal * straal * pi
+        private double AreaCircle(double radius)
+        {
+            double result = radius * radius * Math.PI;
+            return result;
+        }
 
         #endregion
+
+        private void btnArea_Click(object sender, EventArgs e)
+        {
+            double radius = Convert.ToDouble(txtRadius.Text);
+            double area = AreaCircle(radius);
+            txtResult.Text = area.ToString();
+        }
     }
 }
