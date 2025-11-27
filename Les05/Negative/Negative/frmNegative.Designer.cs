@@ -38,21 +38,21 @@
             // 
             this.txtNr1.Location = new System.Drawing.Point(13, 13);
             this.txtNr1.Name = "txtNr1";
-            this.txtNr1.Size = new System.Drawing.Size(53, 20);
+            this.txtNr1.Size = new System.Drawing.Size(73, 20);
             this.txtNr1.TabIndex = 0;
             // 
             // txtNr2
             // 
-            this.txtNr2.Location = new System.Drawing.Point(72, 13);
+            this.txtNr2.Location = new System.Drawing.Point(92, 13);
             this.txtNr2.Name = "txtNr2";
-            this.txtNr2.Size = new System.Drawing.Size(53, 20);
+            this.txtNr2.Size = new System.Drawing.Size(68, 20);
             this.txtNr2.TabIndex = 1;
             // 
             // btnCheck
             // 
             this.btnCheck.Location = new System.Drawing.Point(13, 40);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(112, 23);
+            this.btnCheck.Size = new System.Drawing.Size(147, 23);
             this.btnCheck.TabIndex = 2;
             this.btnCheck.Text = "Negative?";
             this.btnCheck.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(50, 75);
+            this.lblResult.Location = new System.Drawing.Point(31, 76);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(35, 13);
             this.lblResult.TabIndex = 3;
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(142, 98);
+            this.ClientSize = new System.Drawing.Size(168, 100);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.txtNr2);
