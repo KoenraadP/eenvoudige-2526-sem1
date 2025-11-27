@@ -128,6 +128,7 @@
             this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(100, 20);
             this.txtResult.TabIndex = 9;
+            this.txtResult.TabStop = false;
             // 
             // FrmSimpleCalculator
             // 
