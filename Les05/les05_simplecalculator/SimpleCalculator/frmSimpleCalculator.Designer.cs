@@ -89,7 +89,7 @@
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.Btn_Click);
             // 
             // btnSubtract
             // 
@@ -99,7 +99,7 @@
             this.btnSubtract.TabIndex = 6;
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
-            this.btnSubtract.Click += new System.EventHandler(this.BtnSubtract_Click);
+            this.btnSubtract.Click += new System.EventHandler(this.Btn_Click);
             // 
             // btnMultiply
             // 
@@ -109,7 +109,7 @@
             this.btnMultiply.TabIndex = 7;
             this.btnMultiply.Text = "x";
             this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.Click += new System.EventHandler(this.BtnMultiply_Click);
+            this.btnMultiply.Click += new System.EventHandler(this.Btn_Click);
             // 
             // btnDivide
             // 
@@ -119,7 +119,7 @@
             this.btnDivide.TabIndex = 8;
             this.btnDivide.Text = ":";
             this.btnDivide.UseVisualStyleBackColor = true;
-            this.btnDivide.Click += new System.EventHandler(this.BtnDivide_Click);
+            this.btnDivide.Click += new System.EventHandler(this.Btn_Click);
             // 
             // txtResult
             // 
@@ -129,7 +129,7 @@
             this.txtResult.Size = new System.Drawing.Size(100, 20);
             this.txtResult.TabIndex = 9;
             // 
-            // frmSimpleCalculator
+            // FrmSimpleCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmSimpleCalculator";
+            this.Name = "FrmSimpleCalculator";
             this.Text = "Rekenmachine";
             this.ResumeLayout(false);
             this.PerformLayout();

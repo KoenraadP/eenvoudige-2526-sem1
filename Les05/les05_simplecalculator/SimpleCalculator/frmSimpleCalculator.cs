@@ -59,26 +59,14 @@ namespace SimpleCalculator
 
         #region events
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        // algemene click methode voor de buttons
+        private void Btn_Click(object sender, EventArgs e)
         {
             ReadNumbers();
-            double result = Calculate(number1, number2, "+");
+            // tekentje op button lezen
+            string operation = ((Button)sender).Text;
+            double result = Calculate(number1, number2, operation);
             txtResult.Text = result.ToString();
-        }
-
-        private void BtnSubtract_Click(object sender, EventArgs e)
-        {
-            ReadNumbers();
-        }
-
-        private void BtnMultiply_Click(object sender, EventArgs e)
-        {
-            ReadNumbers();
-        }
-
-        private void BtnDivide_Click(object sender, EventArgs e)
-        {
-            ReadNumbers();
         }
 
         #endregion
