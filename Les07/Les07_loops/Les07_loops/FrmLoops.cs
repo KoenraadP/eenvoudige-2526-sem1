@@ -36,9 +36,28 @@ namespace Les07_loops
             return output;
         }
 
+        // methode die met een while loop werkt
+        private string WhileLoopNumbers(int max)
+        {
+            string output = "";
+
+            // beginnen bij 1
+            int i = 1;
+
+            // zolang i niet groter is dan max...
+            while (i <= max)
+            {
+                output += i.ToString();
+                output += Environment.NewLine;
+                // niet vergeten teller te verhogen op het einde van de while
+            }
+
+            return output;
+        }
+
         private void BtnShowNumbers_Click(object sender, EventArgs e)
         {
-            string output = ForLoopNumbers(10);
+            string output = ForLoopNumbers(1);
             // getrimde output in textbox plaatsen
             // trim --> alle spaties/witregels voor en na de string verwijderen
             txtNumbers.Text = output.Trim();
@@ -55,6 +74,14 @@ namespace Les07_loops
         private void BtnShowNumbers3_Click(object sender, EventArgs e)
         {
             string output = ForLoopNumbers(1000);
+            // getrimde output in textbox plaatsen
+            // trim --> alle spaties/witregels voor en na de string verwijderen
+            txtNumbers.Text = output.Trim();
+        }
+
+        private void BtnWhile_Click(object sender, EventArgs e)
+        {
+            string output = WhileLoopNumbers(10);
             // getrimde output in textbox plaatsen
             // trim --> alle spaties/witregels voor en na de string verwijderen
             txtNumbers.Text = output.Trim();

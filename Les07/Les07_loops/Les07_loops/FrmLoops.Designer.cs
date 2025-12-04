@@ -32,11 +32,12 @@
             this.btnShowNumbers1 = new System.Windows.Forms.Button();
             this.btnShowNumbers2 = new System.Windows.Forms.Button();
             this.btnShowNumbers3 = new System.Windows.Forms.Button();
+            this.btnWhile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNumbers
             // 
-            this.txtNumbers.Location = new System.Drawing.Point(13, 99);
+            this.txtNumbers.Location = new System.Drawing.Point(13, 129);
             this.txtNumbers.Multiline = true;
             this.txtNumbers.Name = "txtNumbers";
             this.txtNumbers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -73,11 +74,22 @@
             this.btnShowNumbers3.UseVisualStyleBackColor = true;
             this.btnShowNumbers3.Click += new System.EventHandler(this.BtnShowNumbers3_Click);
             // 
+            // btnWhile
+            // 
+            this.btnWhile.Location = new System.Drawing.Point(13, 100);
+            this.btnWhile.Name = "btnWhile";
+            this.btnWhile.Size = new System.Drawing.Size(100, 23);
+            this.btnWhile.TabIndex = 4;
+            this.btnWhile.Text = "While versie";
+            this.btnWhile.UseVisualStyleBackColor = true;
+            this.btnWhile.Click += new System.EventHandler(this.BtnWhile_Click);
+            // 
             // FrmLoops
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(120, 356);
+            this.ClientSize = new System.Drawing.Size(120, 384);
+            this.Controls.Add(this.btnWhile);
             this.Controls.Add(this.btnShowNumbers3);
             this.Controls.Add(this.btnShowNumbers2);
             this.Controls.Add(this.btnShowNumbers1);
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button btnShowNumbers1;
         private System.Windows.Forms.Button btnShowNumbers2;
         private System.Windows.Forms.Button btnShowNumbers3;
+        private System.Windows.Forms.Button btnWhile;
     }
 }
 
