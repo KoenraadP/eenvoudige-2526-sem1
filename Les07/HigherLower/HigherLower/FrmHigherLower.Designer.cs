@@ -47,6 +47,7 @@
             this.btnGuess.TabIndex = 1;
             this.btnGuess.Text = "Cijfer raden";
             this.btnGuess.UseVisualStyleBackColor = true;
+            this.btnGuess.Click += new System.EventHandler(this.BtnGuess_Click);
             // 
             // FrmHigherLower
             // 
