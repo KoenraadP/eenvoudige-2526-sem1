@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Arrays01
 {
     public partial class FrmArrays : Form
     {
-        // nieuwe array declareren
+        // nieuwe arrays declareren
         int[] numbers;
+        string[] names;
         // nieuwe 'random number generator' aanmaken
         Random rng;
 
@@ -59,7 +61,22 @@ namespace Arrays01
         private void FrmArrays_Load(object sender, EventArgs e)
         {
             // random initialiseren
-            rng = new Random();            
+            rng = new Random();
+            // names initialiseren
+            names = new string[] { "Sohail", "Tim", "Yasin", 
+                "Kasper", "Kenny" };
+        }
+
+        private void BtnNames_Click(object sender, EventArgs e)
+        {
+            UpdateData(names, lbxData);
+        }
+
+        private void BtnFetch_Click(object sender, EventArgs e)
+        {
+            // naam op specifieke plaats in de array tonen
+            int index = Convert.ToInt32(txtIndex.Text);
+            txtName.Text = names[index-1];
         }
     }
 }
