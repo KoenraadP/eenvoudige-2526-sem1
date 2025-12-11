@@ -90,6 +90,7 @@
             this.Controls.Add(this.btnNumbers);
             this.Name = "FrmArrays";
             this.Text = "Arrays01";
+            this.Load += new System.EventHandler(this.FrmArrays_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
