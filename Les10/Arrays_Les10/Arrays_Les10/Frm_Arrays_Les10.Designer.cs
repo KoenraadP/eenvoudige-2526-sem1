@@ -64,6 +64,7 @@
             this.btnFirst3.TabIndex = 2;
             this.btnFirst3.Text = "Eerste drie";
             this.btnFirst3.UseVisualStyleBackColor = true;
+            this.btnFirst3.Click += new System.EventHandler(this.BtnFirst3_Click);
             // 
             // lbxRandom
             // 
@@ -102,6 +103,7 @@
             this.Controls.Add(this.btnRandom);
             this.Name = "Frm_Arrays_Les10";
             this.Text = "Arrays Les 10";
+            this.Load += new System.EventHandler(this.Frm_Arrays_Les10_Load);
             this.ResumeLayout(false);
 
         }

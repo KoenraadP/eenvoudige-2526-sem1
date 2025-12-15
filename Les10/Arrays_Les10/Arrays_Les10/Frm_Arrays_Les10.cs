@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Arrays_Les10
@@ -61,6 +53,9 @@ namespace Arrays_Les10
 
         private void BtnRandom_Click(object sender, EventArgs e)
         {
+            // knop 2 inschakelen
+            btnSort.Enabled = true;
+
             // array opvullen via methode
             randomNumbers = RandomArray(100, 1000, 20);
 
@@ -70,10 +65,28 @@ namespace Arrays_Les10
 
         private void BtnSort_Click(object sender, EventArgs e)
         {
+            // knop 3 inschakelen
+            btnFirst3.Enabled = true;
+
             // array sorteren van klein naar groot
             Array.Sort(randomNumbers);
             // opnieuw alle items tonen in listbox, deze keer gesorteerd
             UpdateListbox(randomNumbers, lbxSorted);
+        }
+
+        private void BtnFirst3_Click(object sender, EventArgs e)
+        {
+            // eerste drie items uit array tonen in derde listbox
+            for (int i = 0; i < 3; i++)
+            {
+                lbxFirst3.Items.Add(randomNumbers[i]);
+            }
+        }
+        private void Frm_Arrays_Les10_Load(object sender, EventArgs e)
+        {
+            // knoppen 2 en 3 uitschakelen
+            btnSort.Enabled = false;
+            btnFirst3.Enabled = false;
         }
     }
 }
