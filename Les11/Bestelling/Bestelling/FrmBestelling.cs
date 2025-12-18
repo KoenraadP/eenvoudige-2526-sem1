@@ -20,6 +20,8 @@ namespace Bestelling
             InitializeComponent();
         }
 
+        #region methods
+
         // methode om invoer uit txtItem
         // toe te voegen aan list en listbox te updaten
         private void AddItem()
@@ -57,6 +59,8 @@ namespace Bestelling
             // listbox updaten
             UpdateOrder();
         }
+
+        #endregion
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
