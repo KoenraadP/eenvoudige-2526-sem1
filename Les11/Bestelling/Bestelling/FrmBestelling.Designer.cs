@@ -90,6 +90,7 @@
             this.btnSummary.TabIndex = 3;
             this.btnSummary.Text = "Overzicht bestelling";
             this.btnSummary.UseVisualStyleBackColor = true;
+            this.btnSummary.Click += new System.EventHandler(this.BtnSummary_Click);
             // 
             // txtSummary
             // 

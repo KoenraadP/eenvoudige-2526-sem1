@@ -26,8 +26,10 @@ namespace Bestelling
         // toe te voegen aan list en listbox te updaten
         private void AddItem()
         {
+            // invoer string in correcte formaat zetten
+            string input = Capitalise(txtItem.Text);
             // invoer uit txtItem toevoegen aan list
-            orderItems.Add(txtItem.Text);
+            orderItems.Add(input);
             // updateorder methode uitvoeren om in listbox te tonen
             UpdateOrder();
         }
@@ -58,6 +60,26 @@ namespace Bestelling
 
             // listbox updaten
             UpdateOrder();
+        }
+
+        // methode om een string te 'capitalisen'
+        // betekent: eerste letter hoofdletter, andere kleine letters
+        // en ook spaties voor en na de string wegnemen
+        private string Capitalise(string input)
+        {
+            // spaties wegnemen
+            string result = input.Trim();
+
+            // eerste letter ophalen
+            char firstLetter = result[0];
+            // rest van woord
+            string restOfWord = result.Substring(1);
+
+            // aan elkaar plakken in juiste case
+            result = char.ToUpper(firstLetter) 
+                    + restOfWord.ToLower();
+
+            return result;
         }
 
         #endregion
@@ -92,10 +114,33 @@ namespace Bestelling
             // enkele default items al toevoegen aan list
             // en ook tonen in listbox
             orderItems.Add("Koffie");
+            orderItems.Add("Koffie");
+            orderItems.Add("Koffie");
+            orderItems.Add("Thee");
             orderItems.Add("Thee");
             orderItems.Add("Donut");
 
             UpdateOrder();
+        }
+
+        private void BtnSummary_Click(object sender, EventArgs e)
+        {
+            // string aanmaken om output in te voorzien
+            string orderSummary = "";
+
+            // ieder element uit de list (orderItems)
+            // in string plaatsen telkens op een nieuwe regel
+            // Distinct om ieder soort maar één keer te hebben
+            foreach(var item in orderItems.Distinct())
+            {
+                // opslaan hoe veel keer een item in de
+                // volledige list voorkomt
+                int amount = orderItems.Count(x => x == item);
+                orderSummary += item + " \tx " + amount + "\r\n";
+            }
+
+            // string in textbox plaatsen en laatste lege regel verwijderen
+            txtSummary.Text = orderSummary.Trim();
         }
     }
 }
