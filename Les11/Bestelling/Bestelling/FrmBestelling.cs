@@ -43,6 +43,21 @@ namespace Bestelling
             }
         }
 
+        // methode om alle geselecteerde items uit de list te verwijderen
+        // en ook de listbox te updaten
+        private  void DeleteItems()
+        {
+            // alle geselecteerde items uit listbox
+            // verwijderen uit list
+            foreach (string item in lbxOrder.SelectedItems)
+            {
+                orderItems.Remove(item);
+            }
+
+            // listbox updaten
+            UpdateOrder();
+        }
+
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             // controleren of textbox niet leeg is
@@ -61,6 +76,22 @@ namespace Bestelling
                 MessageBox.Show("Geen item ingevoerd!", "Fout",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);    
             }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteItems();
+        }
+
+        private void FrmBestelling_Load(object sender, EventArgs e)
+        {
+            // enkele default items al toevoegen aan list
+            // en ook tonen in listbox
+            orderItems.Add("Koffie");
+            orderItems.Add("Thee");
+            orderItems.Add("Donut");
+
+            UpdateOrder();
         }
     }
 }

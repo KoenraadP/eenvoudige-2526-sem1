@@ -71,12 +71,14 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Verwijderen";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // lbxOrder
             // 
             this.lbxOrder.FormattingEnabled = true;
             this.lbxOrder.Location = new System.Drawing.Point(13, 128);
             this.lbxOrder.Name = "lbxOrder";
+            this.lbxOrder.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbxOrder.Size = new System.Drawing.Size(83, 134);
             this.lbxOrder.TabIndex = 5;
             // 
@@ -112,6 +114,7 @@
             this.Controls.Add(this.btnNewOrder);
             this.Name = "FrmBestelling";
             this.Text = "Bestelling";
+            this.Load += new System.EventHandler(this.FrmBestelling_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
