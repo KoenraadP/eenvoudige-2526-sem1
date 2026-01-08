@@ -12,12 +12,21 @@ namespace Contacts
 {
     public partial class Form1 : Form
     {
+        // global list voor personen
+        List<Person> contacts = new List<Person>();
+
         public Form1()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            CreateContacts();
+        }
+
+        // methode om enkele default contacts aan te maken
+        private void CreateContacts()
         {
             // eerste persoon aanmaken
             Person p1 = new Person();
