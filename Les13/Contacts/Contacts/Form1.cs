@@ -29,17 +29,20 @@ namespace Contacts
         private void CreateContacts()
         {
             // eerste persoon aanmaken
-            Person p1 = new Person();
+            DateTime birthDate1 = new DateTime(1985, 10, 30);
+            Person p1 = new Person("Koenraad", "Pecceu",
+                birthDate1, "koenraad.pecceu@creo.be",
+                "Emelgem");
 
-            // eigenschappen instellen
-            p1.FirstName = "Koenraad";
-            p1.LastName = "Pecceu";
-            p1.BirthDate = new DateTime(1985, 10, 30);
-            p1.Email = "koenraad.pecceu@creo.be";
-            p1.Place = "Emelgem";
+            // tweede persoon aanmaken
+            DateTime birthDate2 = new DateTime(1959, 11, 4);
+            Person p2 = new Person("Eric", "Pecceu",
+                birthDate2, "eric.pecceu@outlook.com",
+                "Torhout");
 
-            // persoon toevoegen aan listbox
-            lbxContacts.Items.Add(p1);
+            // personen toevoegen aan contacts list
+            contacts.Add(p1);
+            contacts.Add(p2);
         }
     }
 }

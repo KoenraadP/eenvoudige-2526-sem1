@@ -15,6 +15,18 @@ namespace Contacts
         public string Email { get; set; }
         public string Place { get; set; }
 
+        // constructor --> deze properties MOETEN ingevuld worden
+        // bij aanmaken persoon in programma
+        public Person(string firstName, string lastName,
+            DateTime birthDate, string email, string place)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDate = birthDate;
+            Email = email;
+            Place = place;
+        }
+
         // override instellen voor ToString
         // dit zorgt er voor dat we zelf kiezen
         // welke info in de listbox getoond wordt
