@@ -114,6 +114,7 @@
             this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Wijzigen";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnDelete
             // 
@@ -123,6 +124,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Verwijderen";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // txtLastName
             // 

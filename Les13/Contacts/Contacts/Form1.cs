@@ -89,6 +89,24 @@ namespace Contacts
             contacts.Add(newContact);
         }
 
+        // methode om gegevens van een Person aan te passen
+        private void UpdateContact(Person p)
+        {
+            // informatie uit textboxes halen
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string email = txtEmail.Text;
+            string place = txtPlace.Text;
+            DateTime birthDate = Convert.ToDateTime(txtBirthDate.Text);
+
+            // eigenschappen van Person p vervangen door textbox data
+            p.FirstName = firstName;
+            p.LastName = lastName;
+            p.Email = email;
+            p.Place = place;
+            p.BirthDate = birthDate;
+        }
+
         // deze code wordt uitgevoerd telkens
         // wanneer een item uit de listbox geselecteerd werd
         private void LbxContacts_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,6 +142,20 @@ namespace Contacts
             // methode uitvoeren om persoon aan list toe te voegen
             AddContact();
             // listbox updaten met nieuwe data
+            UpdateListbox();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            Person p = (Person)lbxContacts.SelectedItem;
+            contacts.Remove(p);
+            UpdateListbox();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            Person p = (Person)lbxContacts.SelectedItem;
+            UpdateContact(p);
             UpdateListbox();
         }
     }
