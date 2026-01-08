@@ -14,17 +14,20 @@ namespace Contacts
         public DateTime BirthDate { get; set; }
         public string Email { get; set; }
         public string Place { get; set; }
+        public bool IsColleague { get; set; }   
 
         // constructor --> deze properties MOETEN ingevuld worden
         // bij aanmaken persoon in programma
         public Person(string firstName, string lastName,
-            DateTime birthDate, string email, string place)
+            DateTime birthDate, string email, string place, 
+            bool isColleague)
         {
             FirstName = firstName;
             LastName = lastName;
             BirthDate = birthDate;
             Email = email;
             Place = place;
+            IsColleague = isColleague;
         }
 
         // override instellen voor ToString

@@ -81,6 +81,9 @@
             // cbxColleague
             // 
             this.cbxColleague.FormattingEnabled = true;
+            this.cbxColleague.Items.AddRange(new object[] {
+            "Geen collega",
+            "Collega"});
             this.cbxColleague.Location = new System.Drawing.Point(156, 143);
             this.cbxColleague.Name = "cbxColleague";
             this.cbxColleague.Size = new System.Drawing.Size(156, 21);

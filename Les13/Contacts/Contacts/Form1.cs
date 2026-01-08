@@ -24,6 +24,7 @@ namespace Contacts
         {
             CreateContacts();
             UpdateListbox();
+            Console.WriteLine(contacts[0].IsColleague);
         }
 
         // methode om enkele default contacts aan te maken
@@ -33,13 +34,13 @@ namespace Contacts
             DateTime birthDate1 = new DateTime(1985, 10, 30);
             Person p1 = new Person("Koenraad", "Pecceu",
                 birthDate1, "koenraad.pecceu@creo.be",
-                "Emelgem");
+                "Emelgem", true);
 
             // tweede persoon aanmaken
             DateTime birthDate2 = new DateTime(1959, 11, 4);
             Person p2 = new Person("Eric", "Pecceu",
                 birthDate2, "eric.pecceu@outlook.com",
-                "Torhout");
+                "Torhout", false);
 
             // personen toevoegen aan contacts list
             contacts.Add(p1);
@@ -67,6 +68,9 @@ namespace Contacts
             txtEmail.Text = p.Email;
             txtPlace.Text = p.Place;
             txtBirthDate.Text = p.BirthDate.ToString("d");
+            // een bool kan omgezet worden naar 0 of 1
+            // eerste element uit combobox (cbxColleague) = index 0
+            cbxColleague.SelectedIndex = Convert.ToInt32(p.IsColleague);
         }
 
         // methode om nieuwe persoon aan te maken
@@ -83,7 +87,7 @@ namespace Contacts
 
             // nieuwe contact/Person aanmaken
             Person newContact = new Person(firstName, lastName, 
-                birthDate, email, place);
+                birthDate, email, place, false);
 
             // toevoegen aan contacts list
             contacts.Add(newContact);
