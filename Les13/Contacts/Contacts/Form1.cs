@@ -23,6 +23,7 @@ namespace Contacts
         private void Form1_Load(object sender, EventArgs e)
         {
             CreateContacts();
+            UpdateListbox();
         }
 
         // methode om enkele default contacts aan te maken
@@ -43,6 +44,87 @@ namespace Contacts
             // personen toevoegen aan contacts list
             contacts.Add(p1);
             contacts.Add(p2);
+        }
+
+        // methode om alle contacts uit list in listbox te tonen
+        private void UpdateListbox()
+        {
+            // listbox eerst leeg maken voor update
+            lbxContacts.Items.Clear();
+
+            foreach (Person p in contacts)
+            {
+                lbxContacts.Items.Add(p);
+            }
+        }
+
+        // methode om alle properties (eigenschappen)
+        // van een opgegeven persoon in de textboxes te plaatsen
+        private void GetProperties(Person p)
+        {
+            txtFirstName.Text = p.FirstName;
+            txtLastName.Text = p.LastName;
+            txtEmail.Text = p.Email;
+            txtPlace.Text = p.Place;
+            txtBirthDate.Text = p.BirthDate.ToString("d");
+        }
+
+        // methode om nieuwe persoon aan te maken
+        // op basis van de ingevulde informatie
+        // en deze persoon toe te voegen aan de contacts list
+        private void AddContact()
+        {
+            // informatie uit textboxes halen
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            string email = txtEmail.Text;
+            string place = txtPlace.Text;
+            DateTime birthDate = Convert.ToDateTime(txtBirthDate.Text);
+
+            // nieuwe contact/Person aanmaken
+            Person newContact = new Person(firstName, lastName, 
+                birthDate, email, place);
+
+            // toevoegen aan contacts list
+            contacts.Add(newContact);
+        }
+
+        // deze code wordt uitgevoerd telkens
+        // wanneer een item uit de listbox geselecteerd werd
+        private void LbxContacts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // eerst controleren of effectief een item geselecteerd werd
+            if (lbxContacts.SelectedItem != null)
+            {
+                // geselecteerde persoon opslaan in variabele
+                // hier voeren we een 'explicit cast' uit zodat
+                // het geselecteerde element kan gebruikt worden als een Person
+                Person selectedPerson = (Person)lbxContacts.SelectedItem;
+
+                // uitvoeren methode om alles te tonen
+                GetProperties(selectedPerson);
+            }            
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            // alle textboxes leeg maken
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtBirthDate.Text = "";
+            txtEmail.Text = "";
+            txtPlace.Text = "";
+
+            // cursor in firstname plaatsen
+            txtFirstName.Focus();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            // methode uitvoeren om persoon aan list toe te voegen
+            AddContact();
+            // listbox updaten met nieuwe data
+            UpdateListbox();
         }
     }
 }
