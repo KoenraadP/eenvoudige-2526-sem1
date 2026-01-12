@@ -39,6 +39,7 @@
             this.cbxCars.Name = "cbxCars";
             this.cbxCars.Size = new System.Drawing.Size(121, 21);
             this.cbxCars.TabIndex = 0;
+            this.cbxCars.SelectedIndexChanged += new System.EventHandler(this.CbxCars_SelectedIndexChanged);
             // 
             // txtPrice
             // 
@@ -56,6 +57,7 @@
             this.Controls.Add(this.cbxCars);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
